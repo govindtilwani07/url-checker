@@ -1,0 +1,37 @@
+.gauge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-svg-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gauge-svg {
+  width: 160px;
+  height: auto;
+  overflow: visible;
+}
+
+.gauge-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.gauge-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.gauge-dot.green  { background: #22d3a0; box-shadow: 0 0 6px #22d3a088; }
+.gauge-dot.yellow { background: #f7c948; box-shadow: 0 0 6px #f7c94888; }
+.gauge-dot.red    { background: #f75f5f; box-shadow: 0 0 6px #f75f5f88; }

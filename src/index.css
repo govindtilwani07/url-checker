@@ -1,0 +1,52 @@
+/* ── RESET & GLOBAL ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #0a0a14;
+  --bg2:        #0f0f1e;
+  --surface:    #13131f;
+  --surface2:   #1a1a2e;
+  --border:     #252538;
+  --border2:    #2e2e4a;
+  --primary:    #4f8ef7;
+  --primary-glow: rgba(79,142,247,0.18);
+  --green:      #22d3a0;
+  --green-glow: rgba(34,211,160,0.15);
+  --red:        #f75f5f;
+  --red-glow:   rgba(247,95,95,0.15);
+  --yellow:     #f7c948;
+  --yellow-glow:rgba(247,201,72,0.15);
+  --text:       #e8e8f0;
+  --text2:      #9898b8;
+  --text3:      #55557a;
+  --mono:       'JetBrains Mono', monospace;
+  --sans:       'Syne', sans-serif;
+  --radius:     14px;
+  --radius-sm:  8px;
+  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+
+/* ── SELECTION ──────────────────────────────────────────── */
+::selection { background: var(--primary-glow); color: var(--primary); }
+
+/* ── UTILITY ─────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
